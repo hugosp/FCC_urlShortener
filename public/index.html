@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>urlShort!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css">
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .link{
+                color:#c7254e;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <h3>URL Shortener Microservice</h3>
+            <h4>Description:</h4>
+            <ul><li>
+                pass a URL as a parameter and you will receive a shortened URL in the JSON response.
+            </li><li>
+                When you visit that shortened URL, it will redirect you to your original link.
+            </li></ul>
+            <h4>Example creation usage:</h4>
+            <blockquote class="link">
+                https://little-url.herokuapp.com/https://www.google.com<br>
+                https://little-url.herokuapp.com/http://foo.com:80
+            </blockquote>
+            Example creation output
+            <blockquote class="link">
+                {"original_url":"http://www.dalahest.se","short_url":"http://fiskballe-hugosp.c9users.io/11","id":11,"_id":"57af35f1ef2e8013ea91c7e5"}
+            </blockquote>
+            Usage:
+            <blockquote class="link">
+            https://little-url.herokuapp.com/11
+            </blockquote>
+            Will redirect to:
+            <blockquote class="link">
+            http://www.dalahest.se
+            </blockquote>
+        </section>
+    </body>
+</html>
